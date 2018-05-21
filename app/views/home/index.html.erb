@@ -1,0 +1,13 @@
+<h1>INDEX</h1>
+
+<% if current_model.nil? == true %>
+
+    <a href="/models/sign_in">로그인</a>
+
+<% elsif current_model.nil? == false %>
+
+    <p> 현재 로그인 되어있는 e-mail : <%= current_model.email %> </p>
+    
+    <a data-method="delete" href="/models/sign_out">로그아웃</a>
+    
+<% end %>
